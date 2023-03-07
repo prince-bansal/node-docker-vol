@@ -1,0 +1,17 @@
+version: "1"
+services:
+  nodeapp:
+    container_name: nodec
+    build: ./user-service
+    ports:
+      - 4000:4000
+    volumes:
+      - ./user-service:/app
+  todoapp:
+    container_name: todoc
+    build: ./todo
+    ports:
+      - 4300:4300
+    volumes:
+      - ./todo:/app        
+      
